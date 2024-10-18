@@ -20,8 +20,14 @@ const ResultsBox = ({ title, url, authors, description, license, type, tags, hig
     return field ? highlightText(field, highlights) : 'N/A';
   };
 
-  // Formatting authors and tags as comma-separated strings
-  const formattedAuthors = authors ? authors.join(', ') : 'N/A';
+  // Safely format authors as a comma-separated string or handle it if it's a string
+  const formattedAuthors = Array.isArray(authors)
+    ? authors.join(', ')
+    : typeof authors === 'string'
+    ? authors
+    : 'N/A';
+
+  // Formatting tags as a comma-separated string
   const formattedTags = tags ? tags.join(', ') : 'N/A';
 
   return (

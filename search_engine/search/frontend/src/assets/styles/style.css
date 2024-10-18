@@ -516,3 +516,35 @@ mark {
 .show-more:hover {
     text-decoration: underline;
 }
+
+/*** Searchbar Suggestion Dropdown ***/
+.suggestion-list {
+    position: absolute;
+    background-color: white; /* Set background color to make suggestions visible */
+    border: 1px solid #ccc;  /* Adds a border for better visual distinction */
+    width: 100%;  /* Ensure it takes the width of the search input */
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .suggestion-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;  /* Adds a separator between suggestions */
+    cursor: pointer;
+    text-align: left;  /* Ensures the text is left-aligned */
+  }
+  
+  .suggestion-list li:hover {
+    background-color: #f0f0f0;  /* Add a hover effect for better UX */
+  }
+  
+  .suggestion-list li:last-child {
+    border-bottom: none;  /* Remove the border for the last suggestion */
+  }
+  
+  .suggestion-list li span {
+    color: black;  /* Ensure text is visible */
+  }
+  
