@@ -2,12 +2,17 @@
 ├── images
 │   ├── search_results.png
 │   └── submit_materials.png
-├── nfdi_search_engine_design
+├── search_engine
 │   ├── Elasticsearch
 │   ├── appsubmitter_backend
 │   │   ├── Dockerfile
 │   │   ├── requirements_submitter.txt
 │   │   └── submitter.py
+│   ├── chatbot/
+│   │   ├── chatbot.py
+│   │   ├── llm_utilities.py
+│   │   ├── requirements_chatbot.txt
+│   │   └── Dockerfile
 │   ├── search
 │   │   ├── backend
 │   │   │   ├── data.json
