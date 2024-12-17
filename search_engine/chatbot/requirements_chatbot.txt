@@ -1,0 +1,6 @@
+elasticsearch
+flask
+flask-cors
+pyyaml
+requests
+openai==1.57.4
