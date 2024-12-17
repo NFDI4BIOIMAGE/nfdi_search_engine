@@ -53,6 +53,22 @@ services:
     volumes:
       - ./search_engine/search/backend/wordcloud/static:/app/static
 
+  chatbot_backend:
+    build:
+      context: ./search_engine/chatbot
+      dockerfile: Dockerfile
+    container_name: chatbot_backend
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - SCADSAI_API_KEY=${SCADSAI_API_KEY}
+      - MODEL_NAME=meta-llama/Meta-Llama-3.1-70B-Instruct
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    ports:
+      - "5002:5000"
+
   frontend:
     build:
       context: ./search_engine/search/frontend  # Path to the frontend code
@@ -63,6 +79,7 @@ services:
     depends_on:
       - appsubmitter_backend
       - search_backend
+      - chatbot_backend
     environment:
       - REACT_APP_BACKEND_URL=http://localhost:5001
 
