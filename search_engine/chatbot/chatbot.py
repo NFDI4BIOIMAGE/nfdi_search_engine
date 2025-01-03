@@ -9,7 +9,8 @@ import os
 
 # Flask app setup
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # Logging setup
 logging.basicConfig(level=logging.INFO)

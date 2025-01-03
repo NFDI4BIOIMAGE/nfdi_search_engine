@@ -39,6 +39,7 @@
 │   │       │   │   ├── About.js
 │   │       │   │   ├── AdvancedSearchBar.js
 │   │       │   │   ├── BlogPost.js
+│   │       │   │   ├──ChatbotWidget.js
 │   │       │   │   ├── Events.js
 │   │       │   │   ├── FilterCard.js
 │   │       │   │   ├── Footer.js

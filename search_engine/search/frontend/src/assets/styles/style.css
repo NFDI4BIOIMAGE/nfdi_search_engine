@@ -584,5 +584,57 @@ mark {
     background-color: #e0e0e0;
 }
 
- 
+/*** Chatbot design ***/
+.chatbot-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.chatbot-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 10000;
+    padding: 15px;
+}
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.chatbot-body {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chatbot-response {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+  
   

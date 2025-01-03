@@ -4,6 +4,7 @@ import SubmitMaterials from '../components/SubmitMaterials';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/style.css';
 import bgSearchbar from '../assets/images/bg-searchbar.jpg';
+import ChatbotWidget from '../components/ChatbotWidget'; 
 
 const HomePage = ({ handleSearch }) => (
   <div>
@@ -63,6 +64,10 @@ const HomePage = ({ handleSearch }) => (
       </div>
     </div>
     {/* About Section End */}
+
+    {/* The floating chatbot start */}
+    <ChatbotWidget />
+    {/* The floating chatbot widget at the bottom end*/}
   </div>
 );
 
